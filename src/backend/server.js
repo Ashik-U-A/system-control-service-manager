@@ -8,7 +8,7 @@ app
 .use(express.static(path.join(__dirname, "..", "frontend")))
 .get("/", serve_home_page)
 .listen(9000, ()=>{
-    console.log("Server Ready and Listening to PORT : 80");
+    console.log("Server Ready and Listening to PORT : 9000");
     init_scs_websocket_service();
 });
 

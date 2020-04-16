@@ -8,6 +8,7 @@ function init_scs_websocket_service() {
     });
     
     ws_server.on("connection", ws => {
+        console.log("A New Connection was made : " + ws.url);
         ws.on("message", message => {
             console.log(`Message from Client : ${message}`);
         });
