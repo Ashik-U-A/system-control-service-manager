@@ -9,8 +9,14 @@ function init_scs_websocket_service() {
     
     ws_server.on("connection", ws => {
         console.log("A New Connection was made : " + ws.url);
+        ws.send("The Message From Server!");
+
         ws.on("message", message => {
             console.log(`Message from Client : ${message}`);
+        });
+
+        ws.on("close", (ws, code, reason) => {
+            console.log(`Connection Closed | ${code} - ${reason}`);
         });
     });
 }
