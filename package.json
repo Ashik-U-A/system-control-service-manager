@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --open --hot",
-    "build": "webpack --mode production --progress --hide-modules"
+    "build": "webpack --mode production --progress --hide-modules",
+    "dev-build": "webpack --mode development --progress"
   },
   "dependencies": {
     "express": "^4.17.1",

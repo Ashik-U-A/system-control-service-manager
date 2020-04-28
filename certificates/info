@@ -1,0 +1,25 @@
+Generating the Key and CSR 
+
+Command : openssl req -newkey rsa:2048 -new -nodes -keyout key.pem -out csr.pem
+
+-----
+Country Name (2 letter code) []:IN
+State or Province Name (full name) []:.
+Locality Name (eg, city) []:.
+Organization Name (eg, company) []:Audibene
+Organizational Unit Name (eg, section) []:Tech
+Common Name (eg, fully qualified host name) []:Audibene Dev  
+Email Address []:ashik.unni@audibene.de
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:AUDIBENE-TA
+
+-----
+
+Generating the CRT
+
+Command: openssl x509 -req -days 1000 -in csr.pem -signkey key.pem -out server.crt
+
+Signature ok
+subject=/C=IN/O=Audibene/OU=Tech/CN=Audibene Dev/emailAddress=ashik.unni@audibene.de
